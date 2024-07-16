@@ -1,5 +1,8 @@
 function main
 
+%You have to run subject_files_combine.m to reorganize Subject.mat at the very beginning.
+subject_files_combine
+
 %%% Experimental Data %%%
 load PriceSetUp
 % The structure PriceSetUp.mat summarizes the stock price data used in the experiment. 
@@ -22,16 +25,16 @@ load Subject
 table_descriptive_stats % The basic statistic of the investment rate.
 
 Subject = fitting_rational; % Model-fitting in the rational expectation model
-save Subject Subject
+%save Subject Subject
 
 Subject  = fitting_linear_inattention; % Model-fitting in the linear constraint sparse optimization model 
-save Subject Subject
+%save Subject Subject
 
 Subject  = fitting_kernel_inattention; % Model-fitting in the empirical learning  sparse optimization model with the SE kernel model
-save Subject Subject
+%save Subject Subject
 
 Subject  = fitting_ARDkernel_inattention; % Model-fitting in the empirical learning  sparse optimization model with the ARD kernel model
-save Subject Subject
+%save Subject Subject
 
 table_fitting_params % Make Table of model fitting results
 

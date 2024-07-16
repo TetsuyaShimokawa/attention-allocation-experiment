@@ -3,7 +3,7 @@ function fig_gaze_entropy_trend
 % data import
 load Subject Subject 
 
-% 特定区間のエントロピー
+% Entropy in each span
 spn{1}=[1:10];
 spn{2}=[11:20];
 spn{3}=[21:30];

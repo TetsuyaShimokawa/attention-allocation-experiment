@@ -121,7 +121,6 @@ alfa=(1/tau2)*exp(-(1/2)*(1/tau2)*(omega_r.^2));%T×1
 llh=0;
 for ct=1:length(price)
     diff=inv(ct,1)-(omega_k(ct,1)/(gamma*price(ct,1)*tau2));
-    %diff=inv(ct,1)-exp(omega_k(ct,1)/(gamma*price(ct,1)*tau2));%%%%%%%%%%%
     llh=llh + (-(1/2)*log(2*pi*sigma2)-(1/sigma2)*(diff^2));
 end
 
